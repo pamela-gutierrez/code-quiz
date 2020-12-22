@@ -1,0 +1,22 @@
+.container{
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+#quiz-container {
+
+}   
+
+#answer-buttons.btn-layout {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.controls {
+    margin-top: 10px;
+    text-align: center ;
+}

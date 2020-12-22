@@ -1,8 +1,14 @@
-var quizContainer = document.getElementById("quiz");
-var resultContainer = documet.getElementById("results");
-var submitButton = document.getElementById("submit");
+var quizContainerElement  = document.getElementById("quiz-container");
+// either this or start button
+var startButton = document.getElementById("start-button")
+var questionElement =document.getElementById("question")
+// var resultContainer = documet.getElementById("results");
+// var submitButton = document.getElementById("submit");
 
-var myQuiz = [
+// Event Listeners
+startButton.addEventListener('click', startGame)
+
+var Quiz = [
     {
         question: "Where is Central America located?",
         answers: {
@@ -52,4 +58,18 @@ var myQuiz = [
     }
 ];
 
+function startGame() {
+    console.log("started")
+    startButton.classList.add("hide")
+    quizContainerElement.classList.remove("hide")
+    setNextQuestion()
+}
+
+function nextQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
 // If statement to say if they answer "X" then add one point to the total score, else take 10 seconds off timer
