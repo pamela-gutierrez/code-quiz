@@ -1,5 +1,7 @@
 .container{
-    background-color: aliceblue;
+    margin-top: 20px;
+    background-color: rgb(86, 189, 86);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -16,7 +18,3 @@ h1 {
     margin-bottom: auto;
 }
 
-.controls {
-    margin-top: 10px;
-    text-align: center ;
-}

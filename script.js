@@ -1,6 +1,6 @@
 // Setting the variables to be used in functions that will call on specific elements from the HTML
 var quizContainerElement = document.getElementById("quiz-container");
-var startButton = document.querySelector(".startBtn")
+var startButton = document.getElementById("startBtn")
 var buttonA = document.getElementById('a')
 var buttonB = document.getElementById('b')
 var buttonC = document.getElementById('c')
@@ -8,18 +8,20 @@ var buttonD = document.getElementById('d')
 var questionElement = document.getElementById("question")
 var buttons = document.getElementById("answer-buttons")
 var startingDiv = document.querySelector(".startingDiv")
+var timerElement = document.getElementById("timer")
 // var resultContainer = documet.getElementById("results");
 
 // Setting the variables to be used in functions but that are not called specifically from the HTML. They will instead be defined and re-defined by the functions executed
 var currentQuestion = 0
 var results;
-var totalSeconds;
+var totalSeconds = 75;
 var timeElapsed;
-var timer
+var timer;
 var correctAnswerCount;
 
 // Event Listeners that will "react" to different buttons being clicked and set off the next function
 startButton.addEventListener('click', startQuiz)
+startButton.addEventListener('click', setTimeout)
 buttonA.addEventListener('click', answerSelected)
 buttonB.addEventListener('click', answerSelected)
 buttonC.addEventListener('click', answerSelected)
@@ -30,6 +32,7 @@ function startQuiz() {
     startingDiv.style.display = "none"
     quizContainerElement.style.display = "block"
     showQuestion(quiz[currentQuestion])
+    timer = setInterval(clockCountdown, 1000)
 }
 
 //create timer
@@ -47,6 +50,7 @@ function showQuestion(object) {
     buttonC.textContent = object.answers[2]
     buttonD.textContent = object.answers[3]
 
+
     // currentQuestion = currentQuestion + 1
 }
 
@@ -55,14 +59,19 @@ function answerSelected() {
     currentQuestion = currentQuestion + 1
     showQuestion(quiz[currentQuestion])
 
-
-
 }
 
+function clockCountdown() {
+    totalSeconds = totalSeconds - 1
+    timerElement.textContent = totalSeconds
+    // this is the same as just writing totalSeconds--
+
+}
 
 function displayScore() {
 
 }
+
 var quiz = [
     {
         question: "Where is Central America located?",
