@@ -6,9 +6,9 @@ h1 {
     text-align: center;
 }
 
-#quiz-container {
-
-}   
+.hide {
+    display: none;
+}  
 
 #answer-buttons.btn-layout {
     margin-top: 10px;
