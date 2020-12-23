@@ -30,7 +30,6 @@ function startQuiz() {
     startingDiv.style.display = "none"
     quizContainerElement.style.display = "block"
     showQuestion(quiz[currentQuestion])
-
 }
 
 //create timer
